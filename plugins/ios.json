@@ -1,0 +1,36 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "com.telerik.plugins.healthkit": {
+            "PACKAGE_NAME": "com.ianchouinard.visualworkout"
+        },
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ianchouinard.visualworkout"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ianchouinard.visualworkout"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ianchouinard.visualworkout"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ianchouinard.visualworkout"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ianchouinard.visualworkout"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ianchouinard.visualworkout"
+        },
+        "cordova-sqlite-storage": {
+            "PACKAGE_NAME": "com.ianchouinard.visualworkout"
+        }
+    },
+    "dependent_plugins": {}
+}

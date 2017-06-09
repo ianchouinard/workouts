@@ -1,0 +1,75 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>GroupOut</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content>
+
+  <div class="cta-area">
+    <div class="create-group" (click)="addNewGroup()">
+      <h3>Create A New</h3>
+      <h4>Workout Group</h4>
+      <div class="plus"></div>
+    </div>
+  </div>
+
+  <div *ngIf="hasGroups">
+    <h1 class="group-title">Groups</h1>
+  
+    <div class="groups">
+
+      <div *ngFor="let group of this.state.Groups; let i = index;">
+        <div class="group" (click)="viewGroup(i)">
+          <div class="info">
+            <h1>{{ group.title }}</h1>
+            <h2>{{ group.mainActivity }} <span>at</span> {{ group.location }}</h2>
+          </div>
+          <div class="quantity-card">
+            {{ group.workoutQuantity }} <span>Workouts</span>
+          </div>
+          <div class="go-arrow"></div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="get-started" *ngIf="!hasGroups">
+    <h3>Getting Started</h3>
+    <h1>Creating A Group</h1>
+    <!--
+    <p>
+      Welcome to [appname]! Workout Groups are a custom group of workouts from your Apple Watch. 
+      These groups can represent whatever you want (Workouts from the same location, workouts from the 
+      same month, etc). You can use these groups to analyze and compare your workout performace over 
+      time from the workout data in your group. Click the 'Create A New..' above to start.
+    </p>
+    -->
+    <div class="steps">
+
+      <div class="step">
+        <div>
+          <h3>Something</h3>
+          <p>fldkjflsflkflfjlk<br />ffdsjf</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div>
+          <h3>Something</h3>
+          <p>fldkjflsflkflfjlkffdsjf <br /> fjkhdsfjkfjf</p>
+        </div>
+      </div>
+
+      <div class="step">
+        <div>
+          <h3>Something</h3>
+          <p>fldkjflsflkflfjlk<br />ffdsjf</p>
+        </div>
+      </div>
+
+    </div>
+  </div> 
+
+</ion-content>

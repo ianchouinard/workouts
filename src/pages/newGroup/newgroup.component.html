@@ -1,0 +1,34 @@
+<ion-header>
+	<ion-navbar>  
+	    <ion-title>
+	        New Workout Group
+	    </ion-title>
+	</ion-navbar>
+</ion-header>
+
+<ion-content padding>
+
+      <ion-item>
+        <ion-label>Group Title</ion-label>
+        <ion-input type="text" [(ngModel)]="FormModel.title" name="title" placeholder="Ex: Central Park Walks"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Location</ion-label>
+        <ion-input type="text" [(ngModel)]="FormModel.location" name="location" placeholder="Ex: Central Park"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Usual Activity</ion-label>
+        <ion-input type="text" [(ngModel)]="FormModel.mainActivity" name="activity" placeholder="Ex: Walking"></ion-input>
+      </ion-item>
+      <ion-item>
+        <ion-label>Add Workouts</ion-label>
+        <ion-select [(ngModel)]="selected" multiple="true">
+            <ion-option *ngFor="let workout of workouts; let i = index;" [value]="i">
+                {{ workout.activityType }} : {{ workout.date }}
+            </ion-option>
+        </ion-select>
+      </ion-item>
+      <button ion-button type="submit" (click)="createNewGroup()" block>Create New Workout</button>
+
+
+</ion-content>
